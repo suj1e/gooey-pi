@@ -74,8 +74,7 @@ commands, revision, and results. Do not report old artifacts as current evidence
 
 Development shares the installed application's user data and single-instance
 lock. Follow the isolated development guidance in CONTRIBUTING.md when testing
-state changes. Keep author and committer email set to `freeme62410@gmail.com` or
-`am.will.ryan@gmail.com`; verify both identities on committed work.
+state changes.
 
 Repository engineering and security guidance takes precedence over vendored
 workflow suggestions. Skills do not authorize changes outside the user's scope.
