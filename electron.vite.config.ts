@@ -21,6 +21,10 @@ export default defineConfig({
     root: '.',
     plugins: [react()],
     resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+    // Bind the dev server to IPv4 loopback. On Windows, `localhost` can resolve
+    // to ::1 only, while Electron's renderer connects to 127.0.0.1 and fails
+    // with ERR_CONNECTION_REFUSED.
+    server: { host: '127.0.0.1' },
     // Full minification, but function names survive so the React component
     // stacks ErrorBoundary logs stay readable; no sourcemap can restore those,
     // since React reads them from the function names at runtime. Costs ~4% of
